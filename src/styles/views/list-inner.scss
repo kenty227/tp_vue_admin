@@ -1,0 +1,48 @@
+.app-inner-container {
+  // 减去顶部导航栏固定高度（50px）
+  //height: calc(100vh - 50px);
+  display: grid;
+  // 头部、主体 自动，尾部（分页）固定40px
+  grid-template-rows: auto auto 40px;
+  grid-row-gap: 10px;
+  align-items: center;
+
+  // 头部（筛选区、操作按钮区）
+  .head-container {
+    display: grid;
+    // 筛选区、操作按钮区 自动分配
+    grid-template-columns: auto auto;
+
+    // 筛选区
+    .filter-container {
+      justify-self: start;
+    }
+
+    // 操作按钮区
+    .action-container {
+      justify-self: end;
+    }
+
+    .head-item {
+      margin: 0 5px 5px 0;
+    }
+  }
+
+  // 主体内容（表格等）
+  .body-container {
+    height: 100%;
+    overflow: auto;
+  }
+
+  // （表格）操作列
+  .actions-col {
+    .el-button {
+      margin: 5px 10px 5px 0;
+    }
+  }
+
+  // 尾部（分页）
+  .foot-container {
+    justify-self: end;
+  }
+}

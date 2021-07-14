@@ -1,0 +1,28 @@
+.app-container {
+  display: grid;
+  // 头部、主体 自动
+  grid-template-rows: auto auto;
+  grid-row-gap: 10px;
+  align-items: center;
+
+  // 头部（筛选区、操作按钮区）
+  .head-container {
+    display: grid;
+    // 筛选区、操作按钮区 自动分配
+    grid-template-columns: auto auto;
+
+    // 筛选区
+    .filter-container {
+      justify-self: start;
+    }
+
+    // 操作按钮区
+    .action-container {
+      justify-self: end;
+    }
+
+    .head-item {
+      margin: 0 5px 5px 0;
+    }
+  }
+}
